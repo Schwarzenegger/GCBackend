@@ -9,7 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'grape'
 gem 'grape-swagger'
-gem 'grape_fast_jsonapi', git: 'git@github.com:EmCousin/grape_fast_jsonapi.git'
+gem 'grape_fast_jsonapi'
 gem 'seedbank'
 gem 'api-pagination'
 gem 'kaminari'
