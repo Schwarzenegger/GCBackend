@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      client: Cliente
+    attributes:
+      purchase_channel:
+        name: Nome
+        email: Email
+        access_token: "Token"
+        created_at: Cadastrado em
+        updated_at: Atualizado em

@@ -20,8 +20,8 @@ module API
             Rails.logger
           end
 
-          def authenticate!
-            error!(I18n.t('api.unauthorized'), 401) unless current_user
+          def authenticate_client!
+            error!(I18n.t('api.unauthorized'), 401) unless current_client
           end
 
           def authenticate_admin!
@@ -32,11 +32,11 @@ module API
             end
           end
 
-          def current_user
+          def current_client
             begin
-              u = User.where(access_token: self.headers['Authorization'].partition('=').last).first
+              u = Client.where(access_token: self.headers['Authorization'].partition('=').last).first
               if u
-                @current_user = u
+                @current_client = u
               else
                 false
               end
