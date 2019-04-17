@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PurchaseChannel, type: :model do
- it "should have a factory" do
+  it "should have a factory" do
     expect(FactoryBot.build(:purchase_channel)).to be_valid
   end
 

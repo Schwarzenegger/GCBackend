@@ -1,0 +1,277 @@
+pt-BR:
+  unauthorized:
+    manage:
+      all: "Sem autorização para %{action} %{subject}."
+  recaptcha:
+    errors:
+      verification_failed: 'Recaptcha falhou'
+  actions:
+    new: "Novo %{model}"
+    new_fem: "Nova %{model}"
+    add_generic: "Adicionar"
+    add: "Adicionar %{model}"
+    add_one: "Adicionar um %{model}"
+    create_one: "Cadastrar nova %{model}"
+    create_new: "Cadastrar %{model}"
+    include: "Incluir %{model}"
+    create: "Criar novo %{model}"
+    create_fem: "Criar nova %{model}"
+    edit_model: "Editar %{model}"
+    edit: "Editar"
+    show: "Visualizar"
+    destroy: "Excluir"
+    destroy_model: "Excluir %{model}"
+    destroy_this: "Excluir esta %{model}"
+    remove: "Remover %{model}"
+    save: "Salvar"
+    move_up: "Mover para cima"
+    move_down: "Mover para baixo"
+    rename: "Renomear %{model}"
+    select_file: "Selecionar Arquivo"
+    cancel: "Cancelar"
+    close: "Fechar"
+    back: "Voltar"
+    yes: "Sim"
+    no: "Não"
+    import: "Importar %{model}..."
+  link:
+    back: Cancelar
+    actions: Ações
+  users:
+    index:
+      title: "Usuários"
+      table_empty: "Nenhum usuário nesta etapa até o momento."
+  confirm_delete: "Tem certeza que deseja remover?"
+  mandatory_fields: "*Preenchimento obrigatório"
+  critics_and_suggestions: "Críticas e sugestões"
+  confirm_inclusion: "Tem certeza que deseja incluir este %{model}?"
+  confirm_exclude: "Tem certeza que deseja excluir este %{model}?"
+  remove_error: "Erro ao remover %{model}!"
+  without_permission: "Você não tem permissão para acessar esta página"
+  confirmations:
+    already_confirmed: "Conta já está confirmada. Verifique se já possui senha."
+  date:
+    undefined: "não definido"
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda
+    - Terça
+    - Quarta
+    - Quinta
+    - Sexta
+    - Sábado
+    formats:
+      default: ! "%d/%m/%Y"
+      long: ! "%d %b %Y"
+      short: ! "%d %b"
+      mini: ! " %d"
+      simple_date: ! "%d/%m/%Y"
+      simple_date_dot: ! "%d.%m.%Y"
+      fullcalendar: ! "%B %Y"
+    month_names:
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    formats:
+      default: ! "%d/%m/%Y %H:%i"
+      long: ! "%d %b %Y - %H:%I:%S"
+      short: ! "%d %b - %H:%I:%S"
+      mini: ! " %d"
+      simple_date: ! "%d.%m.%Y"
+      fullcalendar: ! "%B %Y"
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: ! "%{count} dias"
+      x_minutes:
+        one: 1 minuto
+        other: ! "%{count} minutos"
+      x_months:
+        one: 1 mês
+        other: ! "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: ! "%{count} segundos"
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  errors:
+    format: ! "%{attribute} %{message}"
+    messages:
+      extension_whitelist_error: "Arquivo deve estar dentre os formatos permitidos"
+      be_difference: "Não pode ser igual a %{attr}."
+      accepted: deve ser aceito
+      blank: "%{attribute}: não pode ficar em branco"
+      present: "%{attribute}: deve ficar em branco"
+      confirmation: "%{attribute}: não é igual a %{attribute}"
+      empty: "%{attribute}: não pode ficar vazio"
+      equal_to: "%{attribute}: deve ser igual a %{count}"
+      even: "%{attribute}: deve ser par"
+      exclusion: "%{attribute}: não está disponível"
+      greater_than: "%{attribute}: deve ser maior que %{count}"
+      greater_than_or_equal_to: "%{attribute}: deve ser maior ou igual a %{count}"
+      inclusion: "%{attribute}: não está incluído na lista"
+      invalid: "%{attribute}: não é válido"
+      less_than: "%{attribute}: deve ser menor que %{count}"
+      less_than_or_equal_to: "%{attribute}: deve ser menor ou igual a %{count}"
+      not_a_number: "%{attribute}: não é um número"
+      not_an_integer: "%{attribute}: não é um número inteiro"
+      odd: "%{attribute}: deve ser ímpar"
+      record_invalid: ! "A validação falhou: %{errors}"
+      restrict_dependent_destroy:
+        one: "Não é possível excluir o registro pois existe um %{record} dependente"
+        many: "Não é possível excluir o registro pois existem %{record} dependentes"
+      taken: "%{attribute}: já foi cadastrado(a)"
+      too_long: ! "é muito longo (máximo: %{count} caracteres)"
+      too_short: ! "é muito curto (mínimo: %{count} caracteres)"
+      wrong_length: "%{attribute}: não possui o tamanho esperado (%{count} caracteres)"
+    template:
+      body: ! "Por favor, verifique o(s) seguinte(s) campo(s):"
+      header:
+        one: ! "Não foi possível gravar %{model}: 1 erro"
+        other: ! "Não foi possível gravar %{model}: %{count} erros."
+  helpers:
+    titles:
+      new: Cadastrar %{model}
+    loading: Por favor aguarde um instante...
+    select_option: Selecione uma opção
+    select:
+      prompt: Por favor selecione
+    submit:
+      create: Criar %{model}
+      submit: Salvar %{model}
+      update: Atualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! "%u %n"
+        precision: 2
+        separator: ! ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! "%n %u"
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ""
+      format:
+        delimiter: .
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: .
+    precision:
+      format:
+        delimiter: .
+  support:
+    array:
+      last_word_connector: ! " e "
+      two_words_connector: ! " e "
+      words_connector: ! ", "
+  time:
+    am: ""
+    formats:
+      default: ! "%d/%m/%Y %H:%M"
+      default_dot: ! "%d.%m.%Y %H:%M"
+      long: ! "%d %b %Y - %H:%M:%S"
+      short: ! "%d %b - %H:%M:%S"
+      simple_date: ! "%d/%m/%Y"
+      simple_date_dot: ! "%d.%m.%Y"
+      date_time: ! "%d/%m/%Y %H:%M"
+      time: ! "%H:%M"
+      mini: ! " %d %b"
+    pm: ""

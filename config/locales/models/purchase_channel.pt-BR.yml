@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      purchase_channel: Canal de Compra
+    attributes:
+      purchase_channel:
+        name: Nome
+        created_at: Cadastrado em
+        updated_at: Atualizado em

@@ -13,6 +13,8 @@ gem 'grape_fast_jsonapi'
 gem 'seedbank'
 gem 'api-pagination'
 gem 'kaminari'
+gem 'devise'
+gem 'activeadmin'
 
 group :development do
   gem 'bullet'
