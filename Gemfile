@@ -31,10 +31,10 @@ group :test do
   gem 'simplecov', require: false
   gem 'database_cleaner'
   gem 'rails-controller-testing'
-  gem 'faker'
 end
 
 group :development, :test do
+  gem 'faker'
   gem 'pry-rails'
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.7.0'

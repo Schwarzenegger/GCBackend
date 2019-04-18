@@ -1,6 +1,9 @@
 ActiveAdmin.register Order do
+
+  actions  :index, :edit, :show, :update
+
   permit_params :purchase_channel_id, :client_id, :delivery_address, :delivery_service,
-                :total_value, :line_items
+                :total_value, :line_items_raw
 
   filter :purchase_channel
   filter :client
@@ -25,7 +28,7 @@ ActiveAdmin.register Order do
       f.input :delivery_address
       f.input :delivery_service
       f.input :total_value
-      f.input :line_items
+      f.input :line_items_raw
     end
     f.actions
   end

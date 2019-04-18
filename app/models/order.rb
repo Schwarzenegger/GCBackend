@@ -3,8 +3,23 @@ class Order < ApplicationRecord
   belongs_to :purchase_channel
 
   before_create :set_reference
+  serialize :line_items, Array
 
-  serialize :line_items
+  validates :delivery_address, presence: true
+  validates :delivery_service, presence: true
+  validates :total_value, presence: true
+
+  scope :by_purchase_channel, -> (id=nil) { where(purchase_channel: id) unless id.nil? }
+  scope :by_status, -> (status=nil) { where(status: status) unless status.nil? }
+
+  def line_items_raw
+    self.line_items.join("\n") unless self.line_items.nil?
+  end
+
+  def line_items_raw=(values)
+    self.line_items = []
+    self.line_items=values.split(",")
+  end
 
   enum delivery_service:
       { pac: 1,

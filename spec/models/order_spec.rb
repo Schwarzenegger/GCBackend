@@ -26,6 +26,12 @@ RSpec.describe Order, type: :model do
     it { should belong_to(:purchase_channel) }
   end
 
+  context "Validations" do
+    it { should validate_presence_of(:delivery_address) }
+    it { should validate_presence_of(:delivery_service) }
+    it { should validate_presence_of(:total_value) }
+  end
+
   context "Callbacks" do
     describe "#set_reference" do
       it { should callback(:set_reference).before(:create) }

@@ -7,7 +7,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :delivery_address
       t.integer :delivery_service
       t.float :total_value
-      t.text :line_items, array: true
+      t.text :line_items
       t.integer :status, default: 1
       t.datetime :when_entered_production
       t.datetime :finished_production
