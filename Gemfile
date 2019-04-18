@@ -15,6 +15,8 @@ gem 'api-pagination'
 gem 'kaminari'
 gem 'devise'
 gem 'activeadmin'
+gem 'enum_help'
+gem 'stateful_enum'
 
 group :development do
   gem 'bullet'

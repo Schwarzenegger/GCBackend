@@ -1,4 +1,6 @@
 class Client < ApplicationRecord
+  has_many :orders
+
   before_create :generate_access_token
   validates :name, presence: true
   validates :email, presence: true

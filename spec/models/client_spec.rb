@@ -18,6 +18,10 @@ RSpec.describe Client, type: :model do
     it { should validate_presence_of(:name) }
   end
 
+  context "Associations" do
+    it { should have_many(:orders) }
+  end
+
   context "Callbacks" do
     describe "#generate_access_token" do
       it { should callback(:generate_access_token).before(:create) }

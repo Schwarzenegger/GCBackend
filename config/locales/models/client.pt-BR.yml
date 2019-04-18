@@ -3,7 +3,7 @@ pt-BR:
     models:
       client: Cliente
     attributes:
-      purchase_channel:
+      client:
         name: Nome
         email: Email
         access_token: "Token"

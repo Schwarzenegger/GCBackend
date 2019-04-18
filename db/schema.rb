@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_17_134720) do
+ActiveRecord::Schema.define(version: 2019_04_18_113438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,24 @@ ActiveRecord::Schema.define(version: 2019_04_17_134720) do
     t.string "access_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "reference"
+    t.bigint "purchase_channel_id"
+    t.bigint "client_id"
+    t.string "delivery_address"
+    t.integer "delivery_service"
+    t.float "total_value"
+    t.text "line_items", array: true
+    t.integer "status", default: 1
+    t.datetime "when_entered_production"
+    t.datetime "finished_production"
+    t.datetime "send_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_orders_on_client_id"
+    t.index ["purchase_channel_id"], name: "index_orders_on_purchase_channel_id"
   end
 
   create_table "purchase_channels", force: :cascade do |t|

@@ -1,0 +1,19 @@
+pt-BR:
+  activerecord:
+    models:
+      order: Pedido
+    attributes:
+      order:
+        reference: "Referência"
+        purchase_channel: "Canal de Compra"
+        client: "Cliente"
+        delivery_address: "Endereço de Entrega"
+        delivery_service: "Tipo de Frete"
+        total_value: "Valor"
+        line_items: "Items do Pedido"
+        status: "Status"
+        when_entered_production: "Enviado para produção"
+        finished_production: "Produção Finalizada"
+        send_date: "Data de envio"
+        created_at: Cadastrado em
+        updated_at: Atualizado em
