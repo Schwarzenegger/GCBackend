@@ -33,7 +33,6 @@ class Order < ApplicationRecord
       closing: 3,
          sent: 4 } do
 
-
     event :start_production do
       before do
         self.when_entered_production = DateTime.now

@@ -1,0 +1,4 @@
+pt-BR:
+  api:
+    batches:
+      invalid_pc: "Não existe pedidos para enviar para produção nesse Canal de Compra"

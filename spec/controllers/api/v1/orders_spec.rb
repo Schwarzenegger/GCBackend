@@ -109,7 +109,6 @@ describe API::V1::Orders, type: :request do
 
   context "POST" do
     describe "/" do
-
       it "Return return 400 if missing param" do
         post '/api/orders', params: {purchase_channel_id: 1, client_id: 1,
               delivery_address: "test address", delivery_service: 1, total_value: 123.0}
