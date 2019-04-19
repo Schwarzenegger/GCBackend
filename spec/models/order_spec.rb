@@ -19,11 +19,13 @@ RSpec.describe Order, type: :model do
     it { should respond_to(:send_date) }
     it { should respond_to(:created_at) }
     it { should respond_to(:updated_at) }
+    it { should respond_to(:batch_id) }
   end
 
   context "Associations" do
     it { should belong_to(:client) }
     it { should belong_to(:purchase_channel) }
+    it { should belong_to(:batch).optional }
   end
 
   context "Validations" do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_18_133448) do
+ActiveRecord::Schema.define(version: 2019_04_19_123918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,12 @@ ActiveRecord::Schema.define(version: 2019_04_18_133448) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "batches", force: :cascade do |t|
+    t.string "reference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -64,6 +70,7 @@ ActiveRecord::Schema.define(version: 2019_04_18_133448) do
     t.datetime "send_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "batch_id"
     t.index ["client_id"], name: "index_orders_on_client_id"
     t.index ["purchase_channel_id"], name: "index_orders_on_purchase_channel_id"
   end

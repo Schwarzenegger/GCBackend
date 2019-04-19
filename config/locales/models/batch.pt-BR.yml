@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      batch: Lote
+    attributes:
+      batch:
+        reference: Referência
+        created_at: Cadastrado em
+        updated_at: Atualizado em

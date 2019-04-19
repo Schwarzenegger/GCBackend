@@ -1,5 +1,4 @@
 ActiveAdmin.register Order do
-
   actions  :index, :edit, :show, :update
 
   permit_params :purchase_channel_id, :client_id, :delivery_address, :delivery_service,

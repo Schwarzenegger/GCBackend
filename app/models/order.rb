@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :client
   belongs_to :purchase_channel
+  belongs_to :batch, optional: true
 
   before_create :set_reference
   serialize :line_items, Array
