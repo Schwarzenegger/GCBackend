@@ -3,8 +3,8 @@ module API
     class Reports < API::V1::Base
       include API::V1::Defaults
       resource :reports do
-        desc "Simple Finacial Report"
-        get "/simple_finalcial" do
+        desc "Simple Financial Report"
+        get "/simple_financial" do
           authenticate_admin!
           report =  []
           PurchaseChannel.all.each do |pc|

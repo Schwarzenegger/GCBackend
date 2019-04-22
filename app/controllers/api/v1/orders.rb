@@ -45,6 +45,21 @@ module API
           new_order = Order.create(params)
           render new_order
         end
+
+        desc "Edit a order"
+        params do
+          requires :id, type: Integer
+          optional :delivery_address, type: String
+          optional :delivery_service, type: Integer
+          optional :total_value, type: Float
+          optional :line_items, type: Array
+        end
+        put ":id" do
+          authenticate_admin!
+          order = Order.find(params[:id])
+          order.update_attributes(params)
+          render order
+        end
       end
     end
   end

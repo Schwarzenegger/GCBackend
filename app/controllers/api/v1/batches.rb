@@ -4,7 +4,6 @@ module API
       include API::V1::Defaults
 
       resource :batches do
-
         desc "create a new batch"
         params do
           requires :purchase_channel_id, type: Integer

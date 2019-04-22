@@ -4,14 +4,14 @@ describe API::V1::Reports, type: :request do
   let(:admin_user) { create(:admin_user) }
 
   describe "Get" do
-    describe "/" do
+    describe "/simple_financial" do
       it "Return forbidden if has no token" do
-        get '/api/reports/simple_finalcial'
+        get '/api/reports/simple_financial'
         expect(response.status).to eq(401)
       end
 
       it "Return forbidden if token is invalid" do
-        get '/api/reports/simple_finalcial', headers: { 'Authorization' => "Token token=asdadadssdas" }
+        get '/api/reports/simple_financial', headers: { 'Authorization' => "Token token=asdadadssdas" }
         expect(response.status).to eq(401)
       end
 
@@ -24,7 +24,7 @@ describe API::V1::Reports, type: :request do
         new_order_3 = create(:order, status: 1, purchase_channel: pc_2, total_value: 1.0)
 
 
-        get '/api/reports/simple_finalcial', headers: mount_header(admin_user.access_token)
+        get '/api/reports/simple_financial', headers: mount_header(admin_user.access_token)
         expect(response.status).to eq(200)
         report_data = JSON.parse(response.body)
 

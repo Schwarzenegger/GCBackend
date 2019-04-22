@@ -21,18 +21,6 @@ blocks:
           - bundle install -j 4 --path vendor/bundle
           - cache store gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock) vendor/bundle
 
-  - name: Code scanning
-    task:
-      prologue:
-        commands:
-          - sem-version ruby 2.5.5
-      jobs:
-        - name: check style + security
-          commands:
-            - checkout
-            - cache restore gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock),gems-$SEMAPHORE_GIT_BRANCH-,gems-master-
-            - bundle install --deployment --path vendor/bundle
-
   - name: Unit tests
     task:
       prologue:

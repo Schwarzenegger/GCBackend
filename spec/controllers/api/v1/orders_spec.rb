@@ -95,10 +95,12 @@ describe API::V1::Orders, type: :request do
         get "/api/orders/#{order.id}"
         expect(response.status).to eq(401)
       end
+
       it "Return forbidden if token is invalid" do
         get "/api/orders/#{order.id}", headers: { 'Authorization' => "Token token=asdadadssdas" }
         expect(response.status).to eq(401)
       end
+
       it "Return a specific order" do
         get "/api/orders/#{order.id}", headers: mount_header(admin_user.access_token)
         expect(response.status).to eq(200)
@@ -140,6 +142,26 @@ describe API::V1::Orders, type: :request do
               line_items: [ {sky: 'New Case' }]}, headers: mount_header(admin_user.access_token)
         expect(response.status).to eq(201)
         expect(JSON.parse(response.body)['data']["attributes"]["id"]).to_not eq nil
+      end
+    end
+  end
+
+  context "PUT" do
+    describe ":id" do
+      it "Return forbidden if has no token" do
+        put "/api/orders/#{order.id}"
+        expect(response.status).to eq(401)
+      end
+
+      it "Return forbidden if token is invalid" do
+        put "/api/orders/#{order.id}", headers: { 'Authorization' => "Token token=asdadadssdas" }
+        expect(response.status).to eq(401)
+      end
+
+      it "should update a order" do
+        put "/api/orders/#{order.id}", params: { total_value: 0.01 }, headers: mount_header(admin_user.access_token)
+        expect(response.status).to eq(200)
+        expect(JSON.parse(response.body)['data']['attributes']["total_value"]).to eq 0.01
       end
     end
   end

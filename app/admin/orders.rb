@@ -1,4 +1,6 @@
 ActiveAdmin.register Order do
+  menu priority: 1
+
   actions  :index, :edit, :show, :update
 
   permit_params :purchase_channel_id, :client_id, :delivery_address, :delivery_service,
@@ -8,11 +10,14 @@ ActiveAdmin.register Order do
   filter :client
   filter :delivery_service
 
+  includes :client, :purchase_channel
+
   index do
     selectable_column
     id_column
     column :purchase_channel
     column :client
+    column :status
     column :delivery_service
     column :delivery_address
     column :total_value
