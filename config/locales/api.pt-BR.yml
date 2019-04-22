@@ -1,4 +1,5 @@
 pt-BR:
   api:
+    unauthorized: "Sem autorização"
     batches:
       invalid_pc: "Não existe pedidos para enviar para produção nesse Canal de Compra"
