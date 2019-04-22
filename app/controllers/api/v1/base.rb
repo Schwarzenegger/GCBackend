@@ -5,6 +5,7 @@ module API
       mount API::V1::Orders
       mount API::V1::Clients
       mount API::V1::Batches
+      mount API::V1::Reports
     end
   end
 end
